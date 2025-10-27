@@ -1,0 +1,11 @@
+services:
+  jupyter:
+    build:
+      context: .
+    ports:
+      - 8891:8888
+    volumes:
+      - type: bind
+        source: ./src
+        target: /home/jovyan/work
+    command: start-notebook.py --NotebookApp.token='m'

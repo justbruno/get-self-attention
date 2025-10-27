@@ -8,4 +8,4 @@ services:
       - type: bind
         source: ./
         target: /home/jovyan/work
-    command: start-notebook.py --NotebookApp.token='m'
+    command: start-notebook.py --NotebookApp.token='' --NotebookApp.password=''

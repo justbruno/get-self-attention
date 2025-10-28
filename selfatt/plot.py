@@ -18,13 +18,13 @@ class TransformerPlotter:
     def plot_head(self, input, key, query, value, K, Q, wei, V, output):
         layout = [
             ['Input', 'Query', 'Key', 'Value'],
-            ['Q', 'K', 'mask', 'V'],
+            ['Q', 'K', 'W', 'V'],
             ['Output']
         ]
 
         matrices = {
             'Input': input, 'Key': key, 'Query': query, 'Value': value,
-            'K': K, 'Q': Q, 'mask': wei, 'V': V, 'Output': output
+            'K': K, 'Q': Q, 'W': wei, 'V': V, 'Output': output
         }
         return layout, matrices
 
@@ -137,3 +137,4 @@ class TransformerPlotter:
         if loss_str is not None:
             self.ax.set_title(loss_str)
         self.do_plot(self.ax, final_layout, final_matrices)
+        return self.fig, self.ax

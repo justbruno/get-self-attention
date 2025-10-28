@@ -13,7 +13,7 @@ The `try-it.ipynb` notebook lets you
 Two options:
 
 - Run `try-it.ipynb` if you have an adequate environment.
-- `docker compose up`
+- Run `docker compose up` if you have Docker.
 
 ## Recommended exercise
 
@@ -24,5 +24,5 @@ Then create a
 minimal model, e.g.: `n_embd = 1, n_head = 1, head_size = 1, block_size = 1` and visualise it. 
 
 Try to answer the following questions:
-- Will the model learn this sequence?
+- Will the model learn the given sequence?
 - What is the "smallest" model that can learn it?
